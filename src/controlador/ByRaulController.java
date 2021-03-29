@@ -11,9 +11,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+import javax.swing.JOptionPane;
 
-/**
+/**   =
  * FXML Controller class
  *
  * @author Raul
@@ -21,37 +22,37 @@ import javafx.scene.control.TextField;
 public class ByRaulController implements Initializable {
 
     @FXML
-    private Button btnHola;
+    private Label txtUs;
     @FXML
-    private TextField txtUno;
+    private Label txtClave;
     @FXML
-    private TextField txtDos;
-    @FXML
-    private TextField txtResultado;
-    @FXML
-    private Button btnSumar;
+    private Button btnEntrar;
+    
+    Conexion conexion = null;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        //conexion = new Conexion();
     }    
 
-    @FXML
-    private void clickRaton(ActionEvent event) {
-        
-        System.out.println("Hola by Raul");
-    }
 
     @FXML
-    private void click(ActionEvent event) {
+    private void onClick(ActionEvent event) {
         
-        int opeUno = Integer.parseInt(txtUno.getText());
-        int opeDos = Integer.parseInt(txtDos.getText());
+        String usuario = txtUs.getText();
+        String password = txtClave.getText();
         
-        txtResultado.setText(String.valueOf(opeUno + opeDos));
+        boolean verificar = conexion.consultaUsuario(usuario, password);
+        
+        if(verificar){
+            JOptionPane.showMessageDialog(null, "Usuario existete");
+            
+        }else JOptionPane.showMessageDialog(null, "NO EXISTE");
+ 
     }
     
 }

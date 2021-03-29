@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ByRaulController">
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ByRaulController">
    <children>
-      <Button fx:id="btnHola" layoutX="211.0" layoutY="78.0" mnemonicParsing="false" onAction="#clickRaton" prefHeight="22.0" prefWidth="179.0" text="HolaRaul" />
-      <TextField fx:id="txtUno" layoutX="217.0" layoutY="149.0" />
-      <TextField fx:id="txtDos" layoutX="217.0" layoutY="200.0" />
-      <TextField fx:id="txtResultado" layoutX="217.0" layoutY="319.0" />
-      <Button fx:id="btnSumar" layoutX="271.0" layoutY="257.0" mnemonicParsing="false" onAction="#click" text="SUMAR" />
-      <Label layoutX="132.0" layoutY="205.0" text="Operando 2" />
-      <Label layoutX="132.0" layoutY="154.0" text="Operando 1" />
+      <PasswordField layoutX="112.0" layoutY="416.0" />
+      <TextField layoutX="112.0" layoutY="322.0" />
+      <ImageView fitHeight="204.0" fitWidth="201.0" layoutX="95.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/imagen.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="txtUs" layoutX="112.0" layoutY="286.0" text="USUARIO:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtClave" layoutX="112.0" layoutY="381.0" text="CLAVE:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEntrar" layoutX="135.0" layoutY="488.0" mnemonicParsing="false" onAction="#onClick" prefHeight="55.0" prefWidth="122.0" text="Entrar" />
    </children>
 </AnchorPane>
